@@ -33,7 +33,7 @@ module.exports = () => {
         fingerprints: false,
         inject:true,
         name: 'Text Editor',
-        short_name: 'Editor',
+        short_name: 'jate',
         description:'Create notes or code snippets with or without an internet connection',
         background_color:'',
         theme_color:'',
