@@ -32,11 +32,13 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject:true,
-        name: 'Text Editor',
-        short_name: 'jate',
-        description:'Create notes or code snippets with or without an internet connection',
-        background_color:'',
-        theme_color:'',
+        name: 'Just another text EdTtor',
+        short_name: 'J.A.T.E',
+        description:'Take notes with JavaScript syntax highlighting!',
+        background_color:'#225ca3',
+        theme_color:'#225ca3',
+        orientation:'portrait',
+        display:'standalone',
         start_url: '/',
         publicPath: '/',
         icons:[{
