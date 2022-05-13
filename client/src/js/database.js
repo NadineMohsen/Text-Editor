@@ -22,7 +22,8 @@ const tx = textDb.transaction('jate', 'readwrite');
 // Open up the desired object store.
 const store = tx.objectStore('jate');
 // Use the .add() method on the store and pass in the content.
-const request = store.add({ content: content });
+const request = store.put({id:1 , value: content });
+console.log("This is the request for the put request: " + request)
 // Get confirmation of the request.
 const result = await request;
 console.log('🚀 - data saved to the database', result);
@@ -38,11 +39,14 @@ export const getDb = async () =>{
   // Open up the desired object store.
   const store = tx.objectStore('jate');
   // Use the .getAll() method to get all data in the database.
-  const request = store.getAll();
+  const request = store.get(1);
+  console.log("This is the request for the get request: " + request)
   // Get confirmation of the request.
   const result = await request;
   console.log('result.value', result);
-  return result;
+  if(!result){
+    console.log("This is undefined")
+  }
 } 
 
 initdb();
